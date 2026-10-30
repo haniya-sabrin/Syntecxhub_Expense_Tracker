@@ -103,3 +103,8 @@ GitHub: https://github.com/haniya-sabrin
 ---
 
 ⭐ Thank you for checking out SpendWise!
+## 📸 Project Screenshots
+
+### Desktop View
+
+![SpendWise Desktop](./expense-tracker/screenshots/desktop.png)
