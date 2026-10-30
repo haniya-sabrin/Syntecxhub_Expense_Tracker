@@ -1,0 +1,241 @@
+```css
+/* GENERAL STYLING */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f4f6fb;
+  color: #252b42;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 45px 8%;
+}
+
+/* HEADER */
+
+header {
+  margin-bottom: 40px;
+}
+
+header h1 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #5b4bdb;
+  letter-spacing: -1px;
+}
+
+header p {
+  color: #888;
+  margin-top: 8px;
+  font-size: 15px;
+}
+
+/* SUMMARY CARDS */
+
+.summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #eee;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(91, 75, 219, 0.12);
+}
+
+.card h3 {
+  color: #888;
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.card h2 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #252b42;
+  overflow-wrap: anywhere;
+}
+
+/* TRANSACTIONS SECTION */
+
+.transactions {
+  background: white;
+  padding: 35px;
+  border-radius: 18px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+  border: 1px solid #eee;
+}
+
+.transactions h2 {
+  font-size: 21px;
+  margin-bottom: 20px;
+  color: #252b42;
+}
+
+.transactions p {
+  color: #888;
+  padding: 20px 0;
+}
+
+/* FORM */
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 25px 0 40px;
+}
+
+input,
+select {
+  padding: 14px 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  flex: 1;
+  min-width: 150px;
+  outline: none;
+  font-size: 14px;
+  background: #fafaff;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus,
+select:focus {
+  border-color: #5b4bdb;
+  box-shadow: 0 0 0 3px rgba(91, 75, 219, 0.1);
+}
+
+/* BUTTONS */
+
+button {
+  background: #5b4bdb;
+  color: white;
+  border: none;
+  padding: 14px 22px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: #4535bd;
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+/* TRANSACTION ITEMS */
+
+.transaction-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding: 18px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 15px;
+  flex-wrap: wrap;
+}
+
+.transaction-item:last-child {
+  border-bottom: none;
+}
+
+/* RESPONSIVE DESIGN - TABLETS */
+
+@media (max-width: 900px) {
+  .app {
+    padding: 35px 5%;
+  }
+
+  .summary {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card:last-child {
+    grid-column: span 2;
+  }
+}
+
+/* RESPONSIVE DESIGN - MOBILE */
+
+@media (max-width: 600px) {
+  .app {
+    padding: 25px 5%;
+  }
+
+  header {
+    margin-bottom: 30px;
+  }
+
+  header h1 {
+    font-size: 28px;
+  }
+
+  .summary {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .card:last-child {
+    grid-column: auto;
+  }
+
+  .card {
+    padding: 24px;
+  }
+
+  .card h2 {
+    font-size: 25px;
+  }
+
+  .transactions {
+    padding: 22px;
+  }
+
+  .transactions h2 {
+    font-size: 19px;
+  }
+
+  form {
+    flex-direction: column;
+  }
+
+  input,
+  select,
+  form button {
+    width: 100%;
+  }
+
+  .transaction-item {
+    gap: 10px;
+    font-size: 14px;
+  }
+
+  .transaction-item button {
+    padding: 10px 14px;
+  }
+}
+```
